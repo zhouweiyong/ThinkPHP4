@@ -224,8 +224,64 @@
 <!--lastIp CHAR(30) NOT NULL DEFAULT '127.0.0.1',-->
 <!--roleRank TINYINT(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '最高级别为10级,普通用户级别为0'-->
 <!--)ENGINE=MyISAM charset utf8;-->
-
-<div></div></div>
+<div >
+    <form action="" method="post" role="form" class="form-horizontal" >
+        <div class="form-group">
+            <label for="userName" class="col-xs-2 control-label">用户名</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" name="userName" id="userName"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="nickName" class="col-xs-2 control-label">昵&nbsp;&nbsp;&nbsp;&nbsp;称</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" name="nickName" id="nickName"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-xs-2 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+            <div class="col-xs-10">
+                <input type="password" class="form-control" name="password" id="password"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comfirmPwd" class="col-xs-2 control-label">确认密码</label>
+            <div class="col-xs-10">
+                <input type="password" class="form-control" name="comfirmPwd" id="comfirmPwd"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-2 control-label">性别</label>
+            <div class="radio col-xs-10">
+                <label class="col-xs-2"><input type="radio" name="gender" id="female" value="0"/>女</label>
+                <label class="col-xs-2"><input type="radio" name="gender" id="male" value="1"/>男</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-xs-2 control-label">邮&nbsp;&nbsp;&nbsp;&nbsp;箱</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" name="email" id="email"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tel" class="col-xs-2 control-label">电&nbsp;&nbsp;&nbsp;&nbsp;话</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" name="tel" id="tel"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="raleRank" class="col-xs-2 control-label">权限级别</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" name="raleRank" id="raleRank"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-primary">添加用户</button>
+            </div>
+        </div>
+    </form>
+</div></div>
 
         <div class="ace-settings-container" id="ace-settings-container">
             <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">

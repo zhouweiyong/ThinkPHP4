@@ -13,7 +13,7 @@ class UserController extends BaseController {
 
 
         $User = M("User");
-        $page = getpage($User,"",5);
+        $page = getpage($User,"",10);
         $show = $page->show();
         $list = $User->order("addTime")->limit($page->firstRow.",".$page->listRows)->select();
 //        var_dump($show);

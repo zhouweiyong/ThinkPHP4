@@ -30,10 +30,10 @@ function getpage(&$m, $where, $pagesize = 10)
                             <div class="col-sm-6">
                             <div class="dataTables_paginate paging_bootstrap">
                             <ul class="pagination">
-                                <li class="prev disabled">%UP_PAGE%</li> 
+                                <li class="prev">%UP_PAGE%</li> 
                                 <li>%LINK_PAGE%</li> 
                                 <li class="next">%DOWN_PAGE%</li>
-                            </ul>>
+                            </ul>
                             </div>
                             </div>');
 

@@ -215,18 +215,18 @@
         <table class="table table-striped table-bordered table-hover dataTable center">
             <thead>
             <tr>
-                <th class="center" style="width: 53px;">
+                <th class="center">
                     <label>
                         <input class="ace" type="checkbox">
                         <span class="lbl"></span>
                     </label>
                 </th>
-                <th style="width: 150px;" class="center">姓名</th>
-                <th style="width: 150px;" class="center">昵称</th>
-                <th style="width: 150px;" class="center">邮箱</th>
-                <th style="width: 150px;" class="center">权限级别</th>
-                <th style="width: 150px;" class="center">注册时间</th>
-                <th style="width: 150px;" class="center">操作</th>
+                <th  class="col-sm-2 center">姓名</th>
+                <th  class="col-sm-2 center">昵称</th>
+                <th  class="col-sm-2 center">邮箱</th>
+                <th  class="col-sm-2 center">权限级别</th>
+                <th  class="col-sm-2 center">注册时间</th>
+                <th  class="col-sm-2 center">操作</th>
             </tr>
             </thead>
             <tbody aria-relevant="all" aria-live="polite" role="alert">
