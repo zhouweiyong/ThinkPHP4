@@ -1,0 +1,31 @@
+<ul class="nav nav-list">
+    <foreach name="Config.menu" item="menu">
+        <present name="menu.control_sub">
+            <li class="{$menu.control_status}">
+                <a href="#" class="dropdown-toggle">
+                    <i class="icon-{$menu.control_icon}"></i>
+                    <span class="menu-text"> {$menu.control_name} </span>
+                    <b class="arrow icon-angle-down"></b>
+                </a>
+                <ul class="submenu">
+                    <foreach name="menu.control_sub" item="sub">
+                        <li class="{$sub.sub_status}">
+                            <a href="{:U($sub['sub_link'])}">
+                                <i class="icon-double-angle-right"></i>
+                                {$sub.sub_name}
+                            </a>
+                        </li>
+                    </foreach>
+                </ul>
+            </li>
+        <else/>
+            <li class="{$menu.control_status}">
+                <a href="{:U($menu['control_link'])}">
+                    <i class="icon-list-alt"></i>
+                    <span class="menu-text"> {$menu.control_name}  </span>
+                </a>
+            </li>
+        </present>
+    </foreach>
+
+</ul><!-- /.nav-list -->
