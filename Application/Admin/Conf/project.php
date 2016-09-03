@@ -37,6 +37,24 @@ return array(
                     ),
                 )
             ),
+            "img_control" => array(
+                "control_name" => "图片模块",
+                "control_status" => "",
+                "control_icon" => "user",
+                "control_link" => "",
+                "control_sub" => array(
+                    "user_icon"=>array(
+                        "sub_name" => "添加头像",
+                        "sub_link" => "Upimg/addUserIcon",
+                        "sub_status"=>"",
+                    ),
+                    "user_icon"=>array(
+                        "sub_name" => "添加商品图片",
+                        "sub_link" => "Upimg/addProductIcon",
+                        "sub_status"=>"",
+                    ),
+                )
+            ),
             "product_control" => array(
                 "control_name" => "商品模块",
                 "control_status" => "",

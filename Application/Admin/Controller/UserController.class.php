@@ -12,10 +12,10 @@ class UserController extends BaseController {
         $this->assign("Config",$project);
 
 
-        $User = M("User");
+        $User = D("User");
         $page = getpage($User,"",10);
         $show = $page->show();
-        $list = $User->order("addTime")->limit($page->firstRow.",".$page->listRows)->select();
+        $list = $User->order("addTime desc")->limit($page->firstRow.",".$page->listRows)->select();
 //        var_dump($show);
 //        var_dump("<br/>");
 //        var_dump($list);
@@ -34,11 +34,32 @@ class UserController extends BaseController {
         $this->display();
     }
 
+    public function adduser(){
+        $User = D("User");
+        if ($User->create()){
+           $res =  $User->add();
+            if ($res){
+                $this->success("用户添加成功","show");
+            }else{
+                $this->error("用户天添加失败");
+            }
+        }else{
+            $this->error($User->getError());
+        }
+    }
+
     public function update(){
 
     }
 
     public function delete(){
-        
+        $userId = I("userId");
+        $User = D("User");
+        $res =$User->where("userId=".$userId)->delete();
+        if ($res){
+            $this->success("用户删除成功","show");
+        }else{
+            $this->error("用户删除失败");
+        }
     }
 }

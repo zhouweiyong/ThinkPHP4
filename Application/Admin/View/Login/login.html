@@ -73,7 +73,7 @@
                                             {$tip}
                                         </div>
                                     </present>
-                                    <form method="post" action="__URL__/loginCheck">
+                                    <form method="post" action="__URL__/loginCheck" id="login_form">
                                         <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
@@ -95,12 +95,12 @@
 
                                             <div class="clearfix">
                                                 <label class="inline">
-                                                    <input type="checkbox" class="ace"/>
+                                                    <input type="checkbox" class="ace" id="remember"/>
                                                     <span class="lbl"> Remember Me</span>
                                                 </label>
                                                 <button type="button"
                                                         class="width-35 pull-right btn btn-sm btn-primary"
-                                                        onclick="submit()">
+                                                        onclick="" id="login_btn">
                                                     <i class="icon-key"></i>
                                                     登陆
                                                 </button>
@@ -286,7 +286,8 @@
     window.jQuery || document.write("<script src='__PUBLIC__/Admin/Js/jquery-1.10.2.min.js'>" + "<" + "/script>");
 </script>
 <![endif]-->
-
+<script src="__PUBLIC__/Admin/Js/jquery.md5.js"></script>
+<script src="__PUBLIC__/Admin/Js/jquery.cookie.js"></script>
 <script type="text/javascript">
     if ("ontouchend" in document) document.write("<script src='__PUBLIC__/Admin/Js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 </script>
@@ -298,6 +299,83 @@
         jQuery('.widget-box.visible').removeClass('visible');
         jQuery('#' + id).addClass('visible');
     }
+
+    function isEmpty(expression) {
+        if (expression == "" || expression == null || typeof(expression) == undefined) {
+            return true;
+        }
+        return false;
+    }
+
+    function setCookie(name, value, iDay) {
+        /* iDay 表示过期时间
+         cookie中 = 号表示添加，不是赋值 */
+        var oDate = new Date();
+        oDate.setDate(oDate.getDate() + iDay);
+        document.cookie = name + '=' + value + ';expires=' + oDate;
+    }
+
+    function getCookie(name){
+        /* 获取浏览器所有cookie将其拆分成数组 */
+        var arr=document.cookie.split('; ');
+        for(var i=0;i<arr.length;i++)    {
+            /* 将cookie名称和值拆分进行判断 */
+            var arr2=arr[i].split('=');
+            if(arr2[0]==name){
+                return arr2[1];
+            }
+        }
+        return '';
+    }
+
+    function removeCookie(name){
+        /* -1 天后过期即删除 */
+        setCookie(name, 1, -1);
+    }
+
+    $(function () {
+        $("#login_btn").bind("click", function () {
+            var sts =$("#remember").prop("checked");
+            console.log(sts);
+            if ($("input[name=userName]").val() == "") {
+                alert("请输入用户名");
+                $("input[name=userName]").focus();
+                return false;
+            }
+            if ($("input[name=password]").val() == "") {
+                alert("请输入密码");
+                $("input[name=password]").focus();
+                return false;
+            }
+            if($("#remember").prop("checked")){
+                var userName = $("input[name=userName]").val();
+                var pwd = $("input[name=password]").val();
+                setCookie("name",userName,1);
+                setCookie("password",pwd,1);
+            }
+            $("#login_form").submit();
+        });
+
+        $("#remember").bind("change", function () {
+            if ($(this).is(":checked")) {
+            } else {
+                removeCookie("name");
+                removeCookie("password");
+            }
+        });
+
+        function init() {
+            var userName = getCookie("name");
+            var pwd = getCookie("password");
+            if (!(isEmpty(userName) || isEmpty(pwd))) {
+                $("input[name=userName]").val(userName);
+                $("input[name=password]").val(pwd);
+                $("#remember").prop("checked",true);
+            }
+        };
+        init();
+
+    });
 </script>
 <div style="display:none">
     <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>

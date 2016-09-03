@@ -2,7 +2,8 @@
 namespace Admin\Controller;
 class ProductController extends BaseController {
     public function show(){
-        $this->display();
+        var_dump(cookie("userName"));
+        //$this->display();
     }
 
     public function add(){

@@ -1,0 +1,24 @@
+<form action="{:U('Upimg/reUserIcon')}" method="post" id="up_form">
+    <div class="form-group">
+        <input type="file" name="userIcon" class="inline"/><button id="up_btn" type="button" class="btn btn-primary">上传头像</button>
+    </div>
+</form>
+
+<!--[if !IE]> -->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='__PUBLIC__/Admin/Js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='__PUBLIC__/Admin/Js/jquery-1.10.2.min.js'>" + "<" + "/script>");
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    $("#up_btn").bind("click",function () {
+        $("#up_form").submit();
+    });
+</script>

@@ -35,7 +35,7 @@
                         <button class="btn btn-xs btn-info">
                             <i class="icon-edit bigger-120"></i>
                         </button>
-                        <button class="btn btn-xs btn-danger">
+                        <button class="btn btn-xs btn-danger" value="{$vo.userid}" onclick='deleteUser(this)'>
                             <i class="icon-trash bigger-120"></i>
                         </button>
                     </td>
@@ -62,3 +62,8 @@
         </div>
     </div>
 </div>
+<script>
+    function deleteUser(e) {
+        location.href = "__URL__/delete?userId="+e.value;
+    }
+</script>

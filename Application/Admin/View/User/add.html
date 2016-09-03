@@ -13,7 +13,7 @@
 <!--roleRank TINYINT(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '最高级别为10级,普通用户级别为0'-->
 <!--)ENGINE=MyISAM charset utf8;-->
 <div >
-    <form action="" method="post" role="form" class="form-horizontal" >
+    <form action="__URL__/adduser" method="post" role="form" class="form-horizontal" >
         <div class="form-group">
             <label for="userName" class="col-xs-2 control-label">用户名</label>
             <div class="col-xs-10">
@@ -60,7 +60,7 @@
         <div class="form-group">
             <label for="raleRank" class="col-xs-2 control-label">权限级别</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" name="raleRank" id="raleRank"/>
+                <input type="text" class="form-control" name="roleRank" id="raleRank"/>
             </div>
         </div>
         <div class="form-group">
