@@ -10,8 +10,8 @@ return array(
     "PROJECT" => array(
         "title" => "ZWY后台管理系统",
         "logo" => null,
-        "current_control"=>"",
-        "current_action"=>"",
+        "current_control" => "",
+        "current_action" => "",
         "menu" => array(
             "index_control" => array(
                 "control_name" => "控制台",
@@ -28,12 +28,12 @@ return array(
                     "user_show" => array(
                         "sub_name" => "用户列表",
                         "sub_link" => "User/show",
-                        "sub_status"=>"",
+                        "sub_status" => "",
                     ),
                     "user_add" => array(
                         "sub_name" => "添加用户",
                         "sub_link" => "User/add",
-                        "sub_status"=>"",
+                        "sub_status" => "",
                     ),
                 )
             ),
@@ -43,15 +43,15 @@ return array(
                 "control_icon" => "user",
                 "control_link" => "",
                 "control_sub" => array(
-                    "user_icon"=>array(
+                    "user_icon" => array(
                         "sub_name" => "添加头像",
                         "sub_link" => "Upimg/addUserIcon",
-                        "sub_status"=>"",
+                        "sub_status" => "",
                     ),
-                    "user_icon"=>array(
+                    "product_icon" => array(
                         "sub_name" => "添加商品图片",
                         "sub_link" => "Upimg/addProductIcon",
-                        "sub_status"=>"",
+                        "sub_status" => "",
                     ),
                 )
             ),
@@ -64,12 +64,12 @@ return array(
                     "pro_show" => array(
                         "sub_name" => "商品列表",
                         "sub_link" => "Product/show",
-                        "sub_status"=>"",
+                        "sub_status" => "",
                     ),
                     "pro_add" => array(
                         "sub_name" => "添加商品",
                         "sub_link" => "Product/add",
-                        "sub_status"=>"",
+                        "sub_status" => "",
                     ),
                 )
             ),

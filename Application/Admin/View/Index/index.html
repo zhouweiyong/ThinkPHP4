@@ -1,3 +1,9 @@
+<style type="text/css">
+    .verify_img{
+        width: 100px;
+        height: 35px;
+    }
+</style>
 
 <div class="row">
     <div class="col-xs-12">
@@ -6,3 +12,38 @@
         {$content}
     </div>
 </div>
+<div class="row">
+    <form action="__URL__/checkVerify" method="post" id="verify_form">
+        <div class="form-group">
+            <input type="text" name="verifyCode">
+            <img class="verify_img" src="__URL__/verify"/>
+            <button id="refresh_verify" type="button" class="btn btn-danger">刷新</button>
+            <button id="submit_btn" type="button" class="btn btn-default">提交</button>
+        </div>
+    </form>
+</div>
+
+<!--[if !IE]> -->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='__PUBLIC__/Admin/Js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='__PUBLIC__/Admin/Js/jquery-1.10.2.min.js'>" + "<" + "/script>");
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    $(function () {
+        $("#refresh_verify").bind("click",function () {
+            var timeNow = new Date().getTime();
+            $(".verify_img").attr("src","__URL__/verify/"+timeNow);
+        });
+        $("#submit_btn").bind("click",function () {
+            $("#verify_form").submit();
+        });
+    });
+</script>

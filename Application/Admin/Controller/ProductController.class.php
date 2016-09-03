@@ -2,7 +2,10 @@
 namespace Admin\Controller;
 class ProductController extends BaseController {
     public function show(){
-        var_dump(cookie("userName"));
+
+        var_dump(__ACTION__ );
+
+//        var_dump(cookie("userName"));
         //$this->display();
     }
 

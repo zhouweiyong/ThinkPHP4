@@ -2,6 +2,10 @@
 namespace Admin\Controller;
 use Think\Controller;
 
+/**
+ * Class 登陆
+ * @package Admin\Controller
+ */
 class LoginController extends Controller {
     public function index(){
         layout(false);
