@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d043cc1d-9072-4def-a837-23b9b657ae73" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/read.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/read.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ThinkPHP4.iws" />
@@ -98,21 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="read.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/read.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -323,7 +313,7 @@
       <workItem from="1472735272693" duration="9074000" />
       <workItem from="1472819517256" duration="12023000" />
       <workItem from="1472880125279" duration="1879000" />
-      <workItem from="1472887967831" duration="18394000" />
+      <workItem from="1472887967831" duration="18446000" />
     </task>
     <task id="LOCAL-00001" summary="ee">
       <created>1472058715834</created>
@@ -353,11 +343,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472917597311</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1,介绍&#10;">
+      <created>1472917706525</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1472917706525</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97364000" />
+    <option name="totallyTimeSpent" value="97416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1428" y="99" width="1056" height="846" extended-state="0" />
@@ -400,7 +397,8 @@
     <MESSAGE value="添加用户html" />
     <MESSAGE value="1,用户登录COOKIE&#10;2,图片上传" />
     <MESSAGE value="1,验证码&#10;2,图片处理&#10;3,COOKIE&#10;4,上传图片&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="1,验证码&#10;2,图片处理&#10;3,COOKIE&#10;4,上传图片&#10;" />
+    <MESSAGE value="1,介绍&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="1,介绍&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -776,18 +774,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
+    <entry file="file://$PROJECT_DIR$/read.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/read.md">
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+        <state relative-caret-position="270">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
